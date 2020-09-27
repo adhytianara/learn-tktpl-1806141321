@@ -14,47 +14,76 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="30dp"
         android:text="@string/hello_world"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/img_myFoto"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/img_aboutme" />
-
-    <TextView
-        android:id="@+id/tv_nama"
+    <EditText
+        android:id="@+id/et_aboutme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="serif-monospace"
-        android:text="@string/nama_lengkap"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:gravity="center"
+        android:hint='Ketik "aboutme"'
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
 
-    <TextView
-        android:id="@+id/tv_npm"
+    <Button
+        android:id="@+id/btn_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:text="@string/npm"
-        android:textSize="17sp"
-        android:textStyle="bold" />
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:padding="15dp"
+        android:shadowColor="#2196F3"
+        android:text="submit"
+        android:textColor="@android:color/background_light" />
 
-    <TextView
-        android:id="@+id/tv_github"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="@string/github"
-        android:textColor="@android:color/black"
-        android:textSize="17sp"
-        android:textStyle="bold" />
+    <LinearLayout
+        android:id="@+id/ly_aboutme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_myFoto"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/img_aboutme" />
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:text="@string/nama_lengkap"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_npm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/npm"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_github"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/github"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 </LinearLayout>
