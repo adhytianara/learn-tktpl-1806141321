@@ -1,14 +1,10 @@
-package com.stopwatch;
+package id.ac.ui.cs.mobileprogramming.adhytia1806141321.helloworld;
 
 import android.app.Service;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
-
-/**
- * Created by ramil2319 on 4/4/2017.
- */
 
 public class StopwatchService extends Service {
 
@@ -94,9 +90,6 @@ public class StopwatchService extends Service {
             hours = "0"+hours;
         }
 
-    	/* Although we are not using milliseconds on the timer in this example
-    	 * I included the code in the event that you wanted to include it on your own
-    	 */
         milliseconds = String.valueOf((long)time);
         if(milliseconds.length()==2){
             milliseconds = "0"+milliseconds;
