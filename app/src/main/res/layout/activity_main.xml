@@ -49,6 +49,17 @@
             android:textColor="@android:color/background_light" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#4C516D"
+        android:padding="15dp"
+        android:shadowColor="#2196F3"
+        android:text="EXIT"
+        android:textColor="@android:color/background_light" />
+
     <LinearLayout
         android:id="@+id/ly_aboutme"
         android:layout_width="match_parent"

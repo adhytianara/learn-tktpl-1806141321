@@ -5,15 +5,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btn_aboutme, btn_stopwatch;
+    private Button btn_aboutme, btn_stopwatch, btn_exit;
     private LinearLayout ly_aboutme, ly_stopwatch;
     private Button buttonStart, buttonStop;
     private TextView textViewTimer = null;
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonStart.setOnClickListener(this);
         buttonStop = findViewById(R.id.buttonStop);
         buttonStop.setOnClickListener(this);
+        btn_exit = findViewById(R.id.btn_exit);
+        btn_exit.setOnClickListener(this);
     }
 
     @Override
@@ -72,6 +76,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Tekan tombol exit untuk keluar", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_aboutme:
@@ -96,6 +105,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonStop:
                 stopService(new Intent(MainActivity.this, StopwatchService.class));
                 textViewTimer.setText("00:00:00.0");
+                break;
+            case R.id.btn_exit:
+                finish();
                 break;
         }
     }
