@@ -18,33 +18,45 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/et_aboutme"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/ly_stopwatch"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint='Ketik "aboutme"'
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:padding="15dp"
-        android:shadowColor="#2196F3"
-        android:text="submit"
-        android:textColor="@android:color/background_light" />
+        <Button
+            android:id="@+id/btn_aboutme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="15dp"
+            android:shadowColor="#2196F3"
+            android:text="About Me"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/btn_stopwatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="15dp"
+            android:shadowColor="#2196F3"
+            android:text="Stopwatch"
+            android:textColor="@android:color/background_light" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ly_aboutme"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
         android:orientation="vertical"
-        android:visibility="invisible">
+        android:visibility="gone">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_myFoto"
@@ -85,5 +97,43 @@
             android:textColor="@color/colorPrimaryDark"
             android:textSize="17sp"
             android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textViewTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@android:dimen/app_icon_size"
+            android:text="00:00:00.0"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@android:dimen/app_icon_size" />
+
+        <Button
+            android:id="@+id/buttonStart"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@android:dimen/app_icon_size"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="0.04"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Start"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/buttonStop"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Stop"
+            android:textColor="@android:color/background_light" />
     </LinearLayout>
 </LinearLayout>
