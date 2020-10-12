@@ -1,5 +1,115 @@
 <resources>
     <string name="app_name">Hello World</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="data_name">
+        <item>Pantai Panjang</item>
+        <item>Rafflesia Arnoldi</item>
+        <item>Pantai Laguna Samudra</item>
+        <item>Benteng Marlborough</item>
+        <item>Rumah Pengasingan
+            Bung Karno</item>
+        <item>Pulau Terluar Indonesia
+            Pulau Enggano</item>
+        <item>Pantai Sungai Suci</item>
+        <item>Suban Air Panas</item>
+        <item>Bukit Kaba</item>
+        <item>Pulau Tikus</item>
+    </string-array>
+
+    <string-array name="data_lokasi">
+        <item>Jl. Pariwisata, Pantai Panjang, Lempuing, Ratu Agung, Kota Bengkulu, Bengkulu</item>
+        <item>Kabupaten Kepahiang, dan Kabupaten Bengkulu Selatan</item>
+        <item>Jalan Lintas Barat Sumatera ruas Krui-Bintuhan desa Merpas, Kabupaten Kaur</item>
+        <item>Jl. Benteng, Kebun Keling, Teluk Segara, Kota Bengkulu</item>
+        <item>Jl. Soekarno Hatta, Anggut Atas, Ratu Samban, Kota Bengkulu</item>
+        <item>Kabupaten Bengkulu Utara. Barat daya dari kota Bengkulu.</item>
+        <item>Pasar Pedati, Pondok Kelapa, Kabupaten Bengkulu Tengah</item>
+        <item>Cawang Baru, Selupu Rejang, Kabupaten Rejang Lebong</item>
+        <item>Sambirejo, Selupu Rejang, Kabupaten Rejang Lebong</item>
+        <item>10 mil laut dari Kota Bengkulu</item>
+    </string-array>
+
+    <string-array name="data_biaya">
+        <item>Biaya parkir kendaraan\n
+            Motor: Rp 2.000\n
+            Mobil: Rp5.000</item>
+        <item>Rp 10.000/orang</item>
+        <item>Tidak membutuhkan biaya</item>
+        <item>Biaya masuk: Rp 10.000</item>
+        <item>Biaya masuk rumah: Rp 10.000</item>
+        <item>Biaya Penyebrangan:\n
+            Dewasa Reguler: Rp 59.000\n
+            Dewasa VIP: Rp 100.000</item>
+        <item>Biaya masuk pantai: Rp 5.000</item>
+        <item>Biaya masuk pemandian air panas: Rp 10.000\n
+            Biaya masuk ke air terjun: Rp 5.000</item>
+        <item>Biaya masuk lokasi bukit: Rp 10.000</item>
+        <item>10 mil laut dari Kota Bengkulu</item>
+    </string-array>
+
+    <array name="data_foto">
+        <item>@drawable/pantai_panjang</item>
+        <item>@drawable/raflesia</item>
+        <item>@drawable/laguna_samudra</item>
+        <item>@drawable/benteng</item>
+        <item>@drawable/soekarno</item>
+        <item>@drawable/enggano</item>
+        <item>@drawable/sungaisuci</item>
+        <item>@drawable/suban</item>
+        <item>@drawable/bukitkaba</item>
+        <item>@drawable/pulautikus</item>
+    </array>
+
+    <string-array name="data_deskripsi">
+        <item>Pantai Panjang memiliki garis pantai yang mencapai 7 km dan lebar pantai 500 meter.
+            Disini juga terdapat Sport Center sehingga masyarakat dapat melakukan kegiatan olahraga
+            seperti voly pantai, berjalan, dan berselancar. Di pagi dan sore hari biasanya pantai akan
+            dipenuhi oleh masyarakat yang melakukan jogging di pinggir pantai.
+            Ombak di Pantai Panjang banyak dimanfaatkan oleh para pengunjung untuk berselancar.
+            Pantai Panjang yang ada di Kota Bengkulu ini mempunyai banyak fasilitas diantaranya
+            terdapat restoran, cafe, penginapan, area bermain, pusat perbelanjaan, hingga fasilitas untuk olahraga.</item>
+        <item>Penamaan bunga raksasa, Rafflesia Arnoldi, tidak terlepas oleh sejarah penemuannya
+            pertama kali pada tahun 1818 di hutan tropis Bengkulu (Sumatra) di suatu
+            tempat dekat Sungai Manna, Lubuk Tapi, Kabupaten Bengkulu Selatan,
+            sehingga Bengkulu dikenal sebagai Bumi Rafflesia. Kita dapat mengamati secara
+            langsung mekarnya buka langka ini dan mengabadikan momen yang ada</item>
+        <item>Pantai yang memiliki laguna sangat luas ini berkonsep hutan pantai.
+            Pengunjung dapat berenang dengan aman hingga berperahu di dalam laguna ini.
+            Air pantai yang terlihat sangat jernih disertai dengan pasir yang berwarna
+            cokelat keemasan, menjadi daya tarik tersendiri bagi pantai satu ini</item>
+        <item>Benteng ini didirikan oleh East India Company (EIC) tahun 1714-1719
+            di bawah pimpinan gubernur Joseph Callet sebagai benteng pertahanan Inggris.
+            Di benteng ini, kita dapat melihat banyak ruangan beserta koleksi peninggalan benteng dahulu.
+            Selain itu, kita juga dapat melihat pemandangan kota bengkulu yang indah dari atas benteng</item>
+        <item>Rumah Pengasingan Bung Karno merupakan tempat Soekarno menjalani hukuman
+            pengasingan sebagai tahanan politik. Pada awalnya, Soekarno diasingkan ke Ende, Flores pada 14 Januari 1934.
+            Ia diasingkan di sana selama empat tahun (1934-1938).Setelah itu, ia diasingkan ke Bengkulu. Di rumah pengasingan ini,
+            kita dapat melihat sejumlah koleksi barang yang dahulu digunakan oleh mantan preside pertama Republik Indonesia</item>
+        <item>Pulau Enggano adalah pulau terluar Indonesia yang terletak di Samudra Hindia.
+            Jadwal penyeberangan dilakukan sebanyak dua kali tiap minggu.
+            Berangkat dari Kota Bengkulu hari Selasa, kembali lagi ke Kota Bengkulu Rabu kemudian
+            berangkat lagi hari Jumat dan pulang dari Enggano Sabtu.</item>
+        <item>Meski bernama sungai suci, sebenarnya tempat wisata ini adalah sebuah pantai.
+            Konon, pantai ini sering dikunjungi oleh Bung Karno selama pengasingan di Bengkulu.
+            Keunikan Sungai Suci terlihat dari keberadaan pulau batu karang kecil yang menjorok
+            ke laut seperti di Tanah Lot Bali. Kamu juga bisa memacu adrenalin dengan melewati
+            jembatan gantung kembar dan merasakan sensasi jembatan bergoyang diterpa angin pantai.
+            Tunggulah hingga malam menjelang dan nikmatilah pemandangan sunset terbaik di Bengkulu.</item>
+        <item>Obyek wisata ini terletak +6 km dari Kota Curup. Selain merupakan tempat rekreasi yang menyenangkan,
+            air panas di obyek wisata ini dipercaya berguna untuk penyembuhan berbagai penyakit kulit,
+            pegal linu dan rematik. Di lokasi ini juga terdapat air terjun yang indah dengan ketinggian
+            +90 m dengan air yang jernih dan dingin. Selain itu terdapat pula batu yang dianggap
+            keramat yang diberi nama Batu Menangis oleh masyarakat setempat. </item>
+        <item>Bukit Kaba merupakan gunung berapi yang masih aktif dan masuk dalam
+            kawasan Taman Wisata Alam tempat konservasi bunga raksasa Rafflesia Arnoldi.
+            tinggian 1,937 mdpl, para pendaki pemula bisa dengan mudah mencapai puncak bukit
+            tanpa kendala yang berarti. Di puncak terdapat area perkemahan yang selalu
+            penuh saat libur tiba. Pesona Bukit Kaba terletak pada area kawah hidup dan
+            kawah mati serta panorama alam hutan Bengkulu dari ketinggian yang spektakuler.</item>
+        <item>Diperlukan waktu selama 40 menit menyeberang pulau menggunakan perahu nelayan atau kapal wisata khusus.
+            Meski luasnya hanya 0,6 hektar, Pulau Tikus ditopang terumbu karang seluas 200 hektar.
+            Pulau ini bisa dikunjungi dengan one day trip alias perjalanan satu hari.
+            Para wisatawan dapat menyewa peralatan snorkeling dan peralatan menyelam untuk menikmati
+            keindahan bawah laut dari pulau tikus</item>
+    </string-array>
 </resources>
