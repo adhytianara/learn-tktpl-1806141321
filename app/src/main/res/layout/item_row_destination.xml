@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iv_foto"
+        android:layout_width="155dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="10dp"
+        tools:src="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tv_destination_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/iv_foto"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Nama" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_destination_name"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@+id/iv_foto"
+        android:maxLines="3"
+        android:textAlignment="gravity"
+        tools:text="Deskripsi" />
+</RelativeLayout>
