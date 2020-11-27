@@ -8,12 +8,29 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_nearby_network"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="30dp"
-        android:text="Hello World"
+        android:text="Nearby Network"
         android:textColor="@android:color/black"
         android:textSize="30sp"
         android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/list_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorAccent"
+        android:text="scan"
+        android:textColor="@android:color/white" />
+
+
 </LinearLayout>
