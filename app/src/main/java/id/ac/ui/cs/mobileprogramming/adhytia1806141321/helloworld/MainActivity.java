@@ -9,24 +9,38 @@ import android.content.pm.PackageManager;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cz.msebera.android.httpclient.Header;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.btn_scan)
     Button btnScan;
+
+    @BindView(R.id.btn_send)
+    Button btnSend;
+
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
 
     @BindView(R.id.list_wifi)
     ListView listViewWifi;
@@ -35,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView tvNearbyNetwork;
 
     private WifiManager wifiManager;
+    private List<String> listWifi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +57,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setTitle("Nearby Network");
-
         askPermission();
         init();
 
         btnScan.setOnClickListener(this);
+        btnSend.setOnClickListener(this);
     }
 
 
@@ -79,8 +94,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btn_scan) {
-            scanNearbyNetwork();
+        switch (v.getId()) {
+            case R.id.btn_scan:
+                progressBar.setVisibility(View.VISIBLE);
+                scanNearbyNetwork();
+                break;
+            case R.id.btn_send:
+                progressBar.setVisibility(View.VISIBLE);
+                if (listWifi != null) {
+                    sendListWifi(listWifi);
+                }
+                break;
         }
     }
 
@@ -94,16 +118,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void scanSuccess() {
         List<ScanResult> results = wifiManager.getScanResults();
         displayWifiList(results);
+        progressBar.setVisibility(View.GONE);
     }
 
 
     private void scanFailure() {
         List<ScanResult> results = wifiManager.getScanResults();
         displayWifiList(results);
+        progressBar.setVisibility(View.GONE);
     }
 
     private void displayWifiList(List<ScanResult> results) {
-        List<String> listWifi = new ArrayList<>();
+        listWifi = new ArrayList<>();
         for (ScanResult scanResult : results) {
             listWifi.add(scanResult.SSID);
         }
@@ -112,5 +138,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 android.R.layout.simple_list_item_1, android.R.id.text1, listWifi);
 
         listViewWifi.setAdapter(adapter);
+    }
+
+    private void sendListWifi(List<String> listWifi) {
+        AsyncHttpClient client = new AsyncHttpClient();
+        String url = "https://c6554d4a1d6551be103520a26666116e.m.pipedream.net";
+        RequestParams params = new RequestParams();
+        for (int i = 0; i < listWifi.size(); i++) {
+            params.put(String.valueOf(i + 1), listWifi.get(i));
+        }
+        client.post(url, params, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                Toast.makeText(getApplication(), "Success", Toast.LENGTH_LONG).show();
+                progressBar.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                Toast.makeText(getApplication(), "Fail. Status code: " + statusCode, Toast.LENGTH_LONG).show();
+                progressBar.setVisibility(View.GONE);
+            }
+        });
     }
 }
