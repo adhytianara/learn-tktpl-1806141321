@@ -1,69 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/helloworld"
+        android:id="@+id/tv_nearby_network"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="30dp"
-        android:text="@string/hello_world"
+        android:text="Nearby Network"
         android:textColor="@android:color/black"
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/img_myFoto"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_below="@id/helloworld"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="false"
-        android:src="@drawable/img_aboutme" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tv_nama"
+        <ListView
+            android:id="@+id/list_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_scan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/img_myFoto"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:fontFamily="serif-monospace"
-        android:text="@string/nama_lengkap"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:backgroundTint="@color/colorAccent"
+        android:text="scan"
+        android:textColor="@android:color/white" />
 
-    <TextView
-        android:id="@+id/npm"
+    <Button
+        android:id="@+id/btn_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_nama"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:text="@string/npm"
-        android:textSize="17sp"
-        android:textStyle="bold" />
+        android:backgroundTint="@color/colorAccent"
+        android:text="send"
+        android:textColor="@android:color/white" />
 
-    <TextView
-        android:id="@+id/github"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/npm"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="@string/github"
-        android:textColor="@android:color/black"
-        android:textSize="17sp"
-        android:textStyle="bold" />
-</RelativeLayout>
+</LinearLayout>
