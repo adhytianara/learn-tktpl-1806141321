@@ -1,4 +1,7 @@
-# Lab Mobile Programming
-Muhamad Adhytia Wana Putra Rahmadhan <br>
-1806141321 <br>
-TKBM TPL - A
+# Lab 2 - From Development to Distribution
+## Deskripsi tugas :  
+Membuat aplikasi sederhana (bisa berhubungan dengan topik akhir, atau melanjutkan hello world minggu lalu):  
+* Mencoba melakukan Unit Test  
+* Mencoba melakukan Instrumented Test  
+* Membuat APK yang di-sign menggunakan certificate sendiri  
+* Menginstall APK tersebut di Handphone / AVD  
